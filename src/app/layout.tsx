@@ -3,6 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { createClient } from "../prismicio";
 
+import Header from "../components/Header"
+import Footer from "../components/Footer"
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -16,13 +19,13 @@ const geistMono = Geist_Mono({
 export async function generateMetadata(): Promise<Metadata> {
     const client = createClient();
 
-    const page = await client.getSingle("settings")
+    const settings = await client.getSingle("settings")
 
     return {
-        title: page.data.site_title || "Alex Mackay",
-        description: page.data.meta_description,
+        title: settings.data.site_title || "Alex Mackay",
+        description: settings.data.meta_description,
         openGraph: {
-            images: [page.data.og_image.url || ""]
+            images: [settings.data.og_image.url || ""]
         }
     }
 }
@@ -35,9 +38,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <header>Header here</header>
+        <Header />
             {children}
-        <footer>Footer here</footer>
+        <Footer />
       </body>
     </html>
   );
