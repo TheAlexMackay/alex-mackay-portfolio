@@ -5,7 +5,6 @@ import { PrismicRichText } from "@prismicio/react";
 import { PrismicNextLink } from "@prismicio/next";
 import { PrismicNextImage } from "@prismicio/next";
 import Bounded from "../../components/Bounded";
-import Button from "../../components/Button";
 import Heading from "../../components/Heading";
 import {JSXMapSerializer} from "@prismicio/react/src/PrismicRichText";
 

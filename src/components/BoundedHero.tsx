@@ -6,7 +6,7 @@ type BoundedProps = {
     children: React.ReactNode;
 }
 
-export default function BoundedHero({as: Comp = "section", className, children, ...restProps}: BoundedProps){
+export default function BoundedHero({as: Comp = "section", children, ...restProps}: BoundedProps){
 
     return (
         <Comp className="px-4 py-10 md:py-12 md:px-6 lg:py-16" {...restProps}>

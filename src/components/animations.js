@@ -1,10 +1,8 @@
-import { animate } from 'animejs';
 import { createTimeline } from 'animejs';
 
 export function runConsoleLog() {
     // Wrap every letter in a span
     const textWrapper = document.querySelector('.animated-into-text .letters');
-    let textLength = 0
     if (textWrapper) {
         const textLength = textWrapper.innerText.length
         console.log("text length is " + textLength)

@@ -1,5 +1,3 @@
-// 'use client';
-// import React, {FC, useEffect} from "react";
 import React, {FC} from "react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";

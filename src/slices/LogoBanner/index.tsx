@@ -1,17 +1,11 @@
 import { FC } from "react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
-import { PrismicRichText } from "@prismicio/react";
-import { PrismicNextLink } from "@prismicio/next";
 import { PrismicNextImage } from "@prismicio/next";
-import Bounded from "../../components/Bounded";
 import BoundedHero from "../../components/BoundedHero";
 import Button from "../../components/Button";
 import Heading from "../../components/Heading";
 import {JSXMapSerializer} from "@prismicio/react/src/PrismicRichText";
-import { createClient } from "../../prismicio";
-import { isFilled } from "@prismicio/client";
-import clsx from "clsx";
 
 const components: JSXMapSerializer = {
   heading2: ({children}) => (

@@ -1,8 +1,7 @@
-import type {Metadata, ResolvingMetadata} from "next";
+import type {Metadata} from "next";
 import { Montserrat, Open_Sans } from "next/font/google";
 import "./globals.css";
 import { createClient } from "../prismicio";
-import clsx from 'clsx';
 import "../components/animations"
 
 import Header from "../components/Header"
