@@ -15,10 +15,10 @@ export default async function Header() {
                         <li key={item.navigation_label}>
                             {/*<PrismicNextLink field={item.navigation_link} className="p-3 font-display font-bold hover:bg-[#191A1E] transition-color duration-250*/}
             {/*ease-in-out py-3 px-6 rounded-xl">{item.navigation_label}</PrismicNextLink>*/}
-                            {item.navigation_link.url && (
+                            {item.navigation_link && (
                                 <PrismicNextLink field={item.navigation_link} className="btn -nav-button">{item.navigation_label}</PrismicNextLink>
                             )}
-                            {!item.navigation_link.url && (
+                            {!item.navigation_link && (
                                 <button className="btn -nav-button || js-scroll-animation">{item.navigation_label}</button>
                             )}
                             {/*<PrismicNextLink field={item.navigation_link} className="btn -nav-button">{item.navigation_label} {item.navigation_link.url}</PrismicNextLink>*/}
