@@ -19,12 +19,12 @@ const components: JSXMapSerializer = {
 /**
  * Props for `Content`.
  */
-export type ContentProps = SliceComponentProps<Content.ContentSlice>;
+export type ContentBlockProps = SliceComponentProps<Content.ContentBlockSlice>;
 
 /**
  * Component for "Content" Slices.
  */
-const Content: FC<ContentProps> = ({ slice }) => {
+const ContentBlock: FC<ContentBlockProps> = ({ slice }) => {
   return (
       <Bounded
           data-slice-type={slice.slice_type}
@@ -59,4 +59,4 @@ const Content: FC<ContentProps> = ({ slice }) => {
   );
 };
 
-export default Content;
+export default ContentBlock;

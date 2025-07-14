@@ -160,7 +160,7 @@ type ContentPageDocumentDataSlicesSlice =
   | LinkSlice
   | GridLinksSlice
   | LogoBannerSlice
-  | ContentSlice
+  | ContentBlockSlice
   | ContactSlice
   | FeaturesSlice
   | LogosSlice
@@ -240,7 +240,7 @@ type HomepageDocumentDataSlicesSlice =
   | HeroSlice
   | GridLinksSlice
   | FeaturesSlice
-  | ContentSlice
+  | ContentBlockSlice
   | CtaSlice
   | ContactSlice;
 
@@ -382,7 +382,7 @@ type PageDocumentDataSlicesSlice =
   | LinkSlice
   | GridLinksSlice
   | LogoBannerSlice
-  | ContentSlice
+  | ContentBlockSlice
   | ContactSlice
   | ImageAndTextSlice
   | LogosSlice
@@ -695,7 +695,7 @@ export type ContactSlice = prismic.SharedSlice<
 /**
  * Item in *ContentBlock → Default → Primary → Content item*
  */
-export interface ContentSliceDefaultPrimaryContentItemItem {
+export interface ContentBlockSliceDefaultPrimaryContentItemItem {
   /**
    * Bold title field in *ContentBlock → Default → Primary → Content item*
    *
@@ -757,7 +757,7 @@ export interface ContentSliceDefaultPrimaryContentItemItem {
 /**
  * Item in *ContentBlock → Small heading → Primary → Content item*
  */
-export interface ContentSliceSmallHeadingPrimaryContentItemItem {
+export interface ContentBlockSliceSmallHeadingPrimaryContentItemItem {
   /**
    * Content title field in *ContentBlock → Small heading → Primary → Content item*
    *
@@ -808,7 +808,7 @@ export interface ContentSliceSmallHeadingPrimaryContentItemItem {
 /**
  * Primary content in *ContentBlock → Default → Primary*
  */
-export interface ContentSliceDefaultPrimary {
+export interface ContentBlockSliceDefaultPrimary {
   /**
    * Content item field in *ContentBlock → Default → Primary*
    *
@@ -818,7 +818,7 @@ export interface ContentSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
    */
   content_item: prismic.GroupField<
-    Simplify<ContentSliceDefaultPrimaryContentItemItem>
+    Simplify<ContentBlockSliceDefaultPrimaryContentItemItem>
   >;
 }
 
@@ -829,16 +829,16 @@ export interface ContentSliceDefaultPrimary {
  * - **Description**: Default
  * - **Documentation**: https://prismic.io/docs/slices
  */
-export type ContentSliceDefault = prismic.SharedSliceVariation<
+export type ContentBlockSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Simplify<ContentSliceDefaultPrimary>,
+  Simplify<ContentBlockSliceDefaultPrimary>,
   never
 >;
 
 /**
  * Primary content in *ContentBlock → Small heading → Primary*
  */
-export interface ContentSliceSmallHeadingPrimary {
+export interface ContentBlockSliceSmallHeadingPrimary {
   /**
    * Content item field in *ContentBlock → Small heading → Primary*
    *
@@ -848,7 +848,7 @@ export interface ContentSliceSmallHeadingPrimary {
    * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
    */
   content_item: prismic.GroupField<
-    Simplify<ContentSliceSmallHeadingPrimaryContentItemItem>
+    Simplify<ContentBlockSliceSmallHeadingPrimaryContentItemItem>
   >;
 }
 
@@ -859,16 +859,16 @@ export interface ContentSliceSmallHeadingPrimary {
  * - **Description**: Default
  * - **Documentation**: https://prismic.io/docs/slices
  */
-export type ContentSliceSmallHeading = prismic.SharedSliceVariation<
+export type ContentBlockSliceSmallHeading = prismic.SharedSliceVariation<
   "smallHeading",
-  Simplify<ContentSliceSmallHeadingPrimary>,
+  Simplify<ContentBlockSliceSmallHeadingPrimary>,
   never
 >;
 
 /**
  * Slice variation for *ContentBlock*
  */
-type ContentSliceVariation = ContentSliceDefault | ContentSliceSmallHeading;
+type ContentBlockSliceVariation = ContentBlockSliceDefault | ContentBlockSliceSmallHeading;
 
 /**
  * ContentBlock Shared Slice
@@ -877,9 +877,9 @@ type ContentSliceVariation = ContentSliceDefault | ContentSliceSmallHeading;
  * - **Description**: Content
  * - **Documentation**: https://prismic.io/docs/slices
  */
-export type ContentSlice = prismic.SharedSlice<
+export type ContentBlockSlice = prismic.SharedSlice<
   "content",
-  ContentSliceVariation
+  ContentBlockSliceVariation
 >;
 
 /**
@@ -1902,14 +1902,14 @@ declare module "@prismicio/client" {
       ContactSliceDefaultPrimary,
       ContactSliceVariation,
       ContactSliceDefault,
-      ContentSlice,
-      ContentSliceDefaultPrimaryContentItemItem,
-      ContentSliceDefaultPrimary,
-      ContentSliceSmallHeadingPrimaryContentItemItem,
-      ContentSliceSmallHeadingPrimary,
-      ContentSliceVariation,
-      ContentSliceDefault,
-      ContentSliceSmallHeading,
+      ContentBlockSlice,
+      ContentBlockSliceDefaultPrimaryContentItemItem,
+      ContentBlockSliceDefaultPrimary,
+      ContentBlockSliceSmallHeadingPrimaryContentItemItem,
+      ContentBlockSliceSmallHeadingPrimary,
+      ContentBlockSliceVariation,
+      ContentBlockSliceDefault,
+      ContentBlockSliceSmallHeading,
       CtaSlice,
       CtaSliceDefaultPrimary,
       CtaSliceVariation,
