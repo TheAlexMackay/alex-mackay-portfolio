@@ -4,18 +4,6 @@ import { SliceComponentProps } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 import BoundedHero from "../../components/BoundedHero";
 import Button from "../../components/Button";
-import Heading from "../../components/Heading";
-import {JSXMapSerializer} from "@prismicio/react/src/PrismicRichText";
-
-const components: JSXMapSerializer = {
-  heading2: ({children}) => (
-      <Heading as="h2" size="xl" className="mb-8 font-semibold">{children}</Heading>
-  ),
-  paragraph: ({children}) => (
-      <p className="text-xl md:text-2xl font-normal font-body text-slate-600 mb-8">{children}</p>
-  )
-}
-
 /**
  * Props for `LogoBanner`.
  */
