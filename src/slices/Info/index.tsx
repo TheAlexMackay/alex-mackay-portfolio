@@ -37,11 +37,11 @@ const Info: FC<InfoProps> = ({ slice }) => {
               // slice.variation === "smallHeading" &&
               <div key={index} className="flex gap-4 w-[100%]">
                 <div className="w-[66.6%]">
-                  <PrismicRichText components={components} field={item.heading} />
-                  <PrismicRichText components={components} field={item.subheading} />
+                  <PrismicRichText components={components} field={item.item_heading} />
+                  <PrismicRichText components={components} field={item.item_subheading} />
                 </div>
                 <div className="w-[33.3%]">
-                  <PrismicRichText components={components} field={item.info} />
+                  <PrismicRichText components={components} field={item.item_info} />
                 </div>
               </div>
           ))}

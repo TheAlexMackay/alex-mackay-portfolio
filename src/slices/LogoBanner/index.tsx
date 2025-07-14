@@ -25,8 +25,8 @@ const LogoBanner: FC<LogoBannerProps> = ({ slice }) => {
                 <div className="logo-banner__image">
                   <div className="aspect-2/1 relative">
                     <picture className="absolute top-0 bottom-0 left-0">
-                      <PrismicNextImage alt={slice.primary.logo.title} field={slice.primary.logo} className="w-full h-full object-contain"
-                                        imgixParams={{ar: "2:1", fit: "cover"}}/>
+                      <PrismicNextImage field={slice.primary.logo} className="w-full h-full object-contain"
+                                        imgixParams={{ar: "2:1"}}/>
                     </picture>
                   </div>
                 </div>

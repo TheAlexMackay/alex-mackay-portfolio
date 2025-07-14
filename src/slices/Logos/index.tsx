@@ -28,9 +28,8 @@ export type LogosProps = SliceComponentProps<Content.LogosSlice>;
 /**
  * Component for "Logos" Slices.
  */
-const Logos: FC<LogosProps> = async ({ slice }: LogosProps): Promise<JSX.Element> => {
-
-    // console.log(slice.primary.testimonial_item)
+// const Logos: FC<LogosProps> = async ({ slice }: LogosProps): Promise<JSX.Element> => {
+const Logos: FC<LogosProps> = async ({ slice }: LogosProps) => {
 
     const client = createClient();
     const logos = await Promise.all(
@@ -53,9 +52,6 @@ const Logos: FC<LogosProps> = async ({ slice }: LogosProps): Promise<JSX.Element
         })
     )
 
-    // runOutputSvg()
-    // useEffect(() => { runOutputSvg() }, [] )
-
     return (
         <Bounded
             data-slice-type={slice.slice_type}
@@ -69,8 +65,8 @@ const Logos: FC<LogosProps> = async ({ slice }: LogosProps): Promise<JSX.Element
                         <div key={index} className="aspect-2/1 relative">
                             <PrismicNextLink className="js-logo-container w-[100%] h-[100%]" field={item.data.link}>
                                 <picture className="logo-image absolute top-0 bottom-0 right-0 left-0 || js-image-logo">
-                                    <PrismicNextImage alt={item.data.image.title} field={item.data.image} className="w-full h-full object-contain"
-                                                      imgixParams={{ar: "2:1", fit: "cover"}}/>
+                                    <PrismicNextImage field={item.data.image} className="w-full h-full object-contain"
+                                                      imgixParams={{ar: "2:1"}}/>
                                 </picture>
                                 <div className="w-[100%] h-[100%] || js-svg-logo">{item.data.image.url}</div>
                             </PrismicNextLink>
@@ -87,8 +83,8 @@ const Logos: FC<LogosProps> = async ({ slice }: LogosProps): Promise<JSX.Element
                             {/*</picture>*/}
                             <PrismicNextLink className="js-logo-container w-[100%] h-[100%]" field={item.data.link}>
                                 <picture className="logo-image absolute top-0 bottom-0 right-0 left-0 || js-image-logo">
-                                    <PrismicNextImage alt={item.data.image.title} field={item.data.image} className="w-full h-full object-contain"
-                                                      imgixParams={{ar: "2:1", fit: "cover"}}/>
+                                    <PrismicNextImage field={item.data.image} className="w-full h-full object-contain"
+                                                      imgixParams={{ar: "2:1"}}/>
                                 </picture>
                                 <div className="w-[100%] h-[100%] || js-svg-logo -small">{item.data.image.url}</div>
                             </PrismicNextLink>

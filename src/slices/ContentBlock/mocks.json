@@ -56,13 +56,6 @@
 									"value": "weigh",
 									"type": "Text"
 								}
-							],
-							[
-								"bold_title",
-								{
-									"__TYPE__": "BooleanContent",
-									"value": false
-								}
 							]
 						]
 					}

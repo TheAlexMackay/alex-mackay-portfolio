@@ -38,8 +38,8 @@ const GridLinks: FC<GridLinksProps> = ({ slice }) => {
                   <div className="pb-8 mb-8 border-b-1 border-white">
                     <div className=" aspect-2/1 relative">
                       <picture className="image-container absolute top-0 bottom-0 left-0">
-                        <PrismicNextImage alt={item.image.title} field={item.image} className="w-full h-full object-contain"
-                                          imgixParams={{ar: "2:1", fit: "cover"}}/>
+                        <PrismicNextImage field={item.image} className="w-full h-full object-contain"
+                                          imgixParams={{ar: "2:1"}}/>
                       </picture>
                     </div>
                   </div>

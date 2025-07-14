@@ -18,15 +18,6 @@
             "label": "Content item",
             "repeat": true,
             "fields": {
-              "bold_title": {
-                "type": "Boolean",
-                "config": {
-                  "label": "Bold title",
-                  "placeholder_false": "false",
-                  "placeholder_true": "true",
-                  "default_value": false
-                }
-              },
               "content_title": {
                 "type": "StructuredText",
                 "config": {

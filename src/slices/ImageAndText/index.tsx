@@ -38,7 +38,7 @@ const ImageAndText: FC<ImageAndTextProps> = ({ slice }) => {
     >
       <div className={clsx('border-b-1 border-white flex gap-16 flex-col pb-8', slice.variation === "imageRight" && "md:flex-row-reverse")}>
         <div className="w-[100%] w-md-[66.6%]">
-          <PrismicNextImage alt={slice.primary.image.title} field={slice.primary.image} className="" />
+          <PrismicNextImage field={slice.primary.image} className="" />
         </div>
         <div className="w-[66.6%] w-md-[33.3%] gap-4">
           <PrismicRichText field={slice.primary.heading} components={components}/>

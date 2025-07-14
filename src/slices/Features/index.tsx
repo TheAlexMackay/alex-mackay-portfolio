@@ -39,7 +39,7 @@ const Features: FC<FeaturesProps> = ({ slice }) => {
         {slice.primary.feature_item.map((item, index) => (
             // <div key={index} className="max-w-xs grid sm:place-items-start place-items-center">
             <div key={index} className="max-w-xl grid sm:place-items-start place-items-center">
-              <PrismicNextImage alt={item.data.image.title} field={item.image} />
+              <PrismicNextImage field={item.image} />
               <PrismicRichText components={components} field={item.title} />
               <PrismicRichText components={components} field={item.description} />
               <PrismicNextLink field={item.link} />

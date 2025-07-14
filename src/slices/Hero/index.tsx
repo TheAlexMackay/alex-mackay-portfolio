@@ -106,7 +106,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
                   </div>
               </div>
                 <div className="mx-auto w-full max-w-[1440px]">
-              <PrismicNextImage alt={slice.primary.hero_image.title} field={slice.primary.hero_image} className="drop-shadow-xl max-w-4xl w-full" />
+              <PrismicNextImage field={slice.primary.hero_image} className="drop-shadow-xl max-w-4xl w-full" />
                 </div>
             </div>
 

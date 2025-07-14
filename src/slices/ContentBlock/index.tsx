@@ -38,13 +38,9 @@ const ContentBlock: FC<ContentBlockProps> = ({ slice }) => {
               // slice.variation === "smallHeading" &&
               <div key={index} className="flex gap-4 w-[100%]">
                 <div className="w-[66.6%]">
-                  {item.bold_title ? (
-                      <div className="font-bold">
-                          <PrismicRichText components={components} field={item.content_title} />
-                      </div>
-                  ) : (
-                      <PrismicRichText components={components} field={item.content_title} />
-                  )}
+                    <div className="font-bold">
+                        <PrismicRichText components={components} field={item.content_title} />
+                    </div>
                 </div>
                 <div className="w-[33.3%]">
                   <PrismicRichText components={components} field={item.content} />
