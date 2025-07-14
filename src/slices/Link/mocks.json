@@ -1,0 +1,23 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"link": {
+				"key": "f61c90c8-ca9f-479d-b78f-4de2fede7824",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com",
+					"text": "charge"
+				}
+			},
+			"link_text": {
+				"__TYPE__": "FieldContent",
+				"value": "good",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

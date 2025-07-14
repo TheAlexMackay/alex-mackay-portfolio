@@ -3,9 +3,12 @@ import { PrismicNextLink, PrismicNextLinkProps } from "@prismicio/next";
 
 export default function Button({className, ...restProps}: PrismicNextLinkProps){
     return(
-        <PrismicNextLink className="block w-fit bg-cyan-700 hover:bg-cyan-800 transition-color duration-200
-            ease-in-out py-3 px-12 rounded-full font-display text-white font-bold text-base tracking-wider mb-8 md:mb-10 last:mb-0"
-            {...restProps}
+        // <PrismicNextLink class="btn" className="block w-fit hover:bg-cyan-800 transition-color duration-250
+        //     ease-in-out rounded-xl font-display text-white font-bold text-base mb-8 md:mb-10 last:mb-0"
+        //     {...restProps}
+        // />
+        <PrismicNextLink className="btn"
+                     {...restProps}
         />
     )
 }

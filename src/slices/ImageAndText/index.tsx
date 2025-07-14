@@ -14,10 +14,15 @@ import clsx from "clsx"
 
 const components: JSXMapSerializer = {
   heading2: ({children})=>(
-      <Heading as="h2" size="lg" className="">{children}</Heading>
+      <Heading as="h2" size="xl" className="leading-none font-bold mb-4 md:mb-8">{children}</Heading>
   ),
   paragraph: ({children})=>(
-      <p className="max-w-md text-lg font-body text-slate-600">{children}</p>
+      <p className="text-1 font-normal font-body mb-4 md:mb-8">{children}</p>
+  ),
+  listItem: ({children})=>(
+      <ul className="list-disc ml-[15px]">
+        <li className="text-1 font-normal font-body mb-4 md:mb-8">{children}</li>
+      </ul>
   )
 }
 
@@ -35,10 +40,11 @@ const ImageAndText: FC<ImageAndTextProps> = ({ slice }) => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <div className="grid gap-8 md:grid-cols-2 place-items-center">
-        <PrismicNextImage field={slice.primary.image}
-                          className={clsx('rounded-lg', slice.variation === "imageRight" && "md:order-2")} />
-        <div className="grid gap-4">
+      <div className={clsx('border-b-1 border-white flex gap-16 flex-col pb-8', slice.variation === "imageRight" && "md:flex-row-reverse")}>
+        <div className="w-[100%] w-md-[66.6%]">
+          <PrismicNextImage alt={slice.primary.image.title} field={slice.primary.image} className="" />
+        </div>
+        <div className="w-[66.6%] w-md-[33.3%] gap-4">
           <PrismicRichText field={slice.primary.heading} components={components}/>
           <PrismicRichText field={slice.primary.content} components={components}/>
         </div>

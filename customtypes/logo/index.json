@@ -1,0 +1,18 @@
+{
+  "format": "custom",
+  "id": "logo",
+  "label": "Logo old",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    }
+  }
+}

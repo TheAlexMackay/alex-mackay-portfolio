@@ -1,0 +1,86 @@
+{
+  "id": "logos",
+  "type": "SharedSlice",
+  "name": "Logos",
+  "description": "Logos",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading2"
+          }
+        },
+        "logo_item": {
+          "type": "Group",
+          "config": {
+            "label": "Logo item",
+            "repeat": true,
+            "fields": {
+              "company": {
+                "type": "Link",
+                "config": {
+                  "label": "Company",
+                  "select": "document",
+                  "repeat": false,
+                  "customtypes": [
+                    "company"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "logo_item_small": {
+          "type": "Group",
+          "config": {
+            "label": "Logo item small",
+            "repeat": true,
+            "fields": {
+              "company": {
+                "type": "Link",
+                "config": {
+                  "label": "Company",
+                  "select": "document",
+                  "repeat": false,
+                  "customtypes": [
+                    "company"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "link_text": {
+          "type": "Text",
+          "config": {
+            "label": "Link text",
+            "placeholder": ""
+          }
+        },
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "Link",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

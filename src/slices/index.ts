@@ -3,9 +3,15 @@
 import dynamic from "next/dynamic";
 
 export const components = {
+  contact: dynamic(() => import("./Contact")),
+  content: dynamic(() => import("./Content")),
   cta: dynamic(() => import("./Cta")),
   features: dynamic(() => import("./Features")),
+  grid_links: dynamic(() => import("./GridLinks")),
   hero: dynamic(() => import("./Hero")),
   image_and_text: dynamic(() => import("./ImageAndText")),
-  testimonials: dynamic(() => import("./Testimonials")),
+  info: dynamic(() => import("./Info")),
+  link: dynamic(() => import("./Link")),
+  logo_banner: dynamic(() => import("./LogoBanner")),
+  logos: dynamic(() => import("./Logos")),
 };

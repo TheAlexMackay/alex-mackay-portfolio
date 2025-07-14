@@ -15,7 +15,8 @@ export default function Heading({
     size = "lg"
 }: HeadingProps){
 return (
-    <Comp className={clsx("font-bold leading-tight tracking-tight font-display text-slate-700",
+    // <Comp className={clsx("leading-tight tracking-tight font-display",
+    <Comp className={clsx("tracking-tight font-display",
         size === "xl" && "text-5xl md:text-7xl",
         size === "lg" && "text-4xl md:text-5xl",
         size === "md" && "text-3xl md:text-4xl",

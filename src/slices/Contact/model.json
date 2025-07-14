@@ -1,0 +1,89 @@
+{
+  "id": "contact",
+  "type": "SharedSlice",
+  "name": "Contact",
+  "description": "Contact",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading2"
+          }
+        },
+        "content": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Content",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em"
+          }
+        },
+        "email_link": {
+          "type": "Link",
+          "config": {
+            "label": "Email link",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        },
+        "email_link_image": {
+          "type": "Image",
+          "config": {
+            "label": "Email link image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "email_link_text": {
+          "type": "Text",
+          "config": {
+            "label": "Email link text",
+            "placeholder": ""
+          }
+        },
+        "linkedin_link": {
+          "type": "Link",
+          "config": {
+            "label": "Linkedin link",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        },
+        "linkedin_link_image": {
+          "type": "Image",
+          "config": {
+            "label": "Linkedin link image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "linkedin_link_text": {
+          "type": "Text",
+          "config": {
+            "label": "Linkedin link text",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

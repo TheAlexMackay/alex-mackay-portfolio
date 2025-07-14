@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+/*HERO ANIMATED TEXT START*/
+
+.animated-intro-text .text-wrapper,
+.animated-intro-text-2 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+}
+
+.animated-intro-text .line,
+.animated-intro-text-2 .line {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #fff;
+    transform-origin: 0 50%;
+}
+
+.animated-intro-text .line1,
+.animated-intro-text-2 .line1 {
+    top: 0;
+    left: 0;
+}
+
+.animated-intro-text .letter,
+.animated-intro-text-2 .letter {
+    display: inline-block;
+    line-height: 1em;
+    opacity: 0;
+}
+
+/*HERO ANIMATED TEXT END*/

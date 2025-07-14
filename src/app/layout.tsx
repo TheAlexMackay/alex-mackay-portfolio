@@ -1,19 +1,23 @@
 import type {Metadata, ResolvingMetadata} from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Montserrat, Open_Sans } from "next/font/google";
 import "./globals.css";
 import { createClient } from "../prismicio";
+import clsx from 'clsx';
+import "../components/animations"
 
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
+    display: 'swap',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const openSans = Open_Sans({
+  variable: "--font-open-sans",
   subsets: ["latin"],
+    display: 'swap',
 });
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -36,11 +40,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+    // <html lang="en" className={clsx(openSans.className, montserrat.className)}>
+      <html lang="en" className={`${openSans.variable} ${montserrat.variable} antialiased`}>
+      <body className="relative">
         <Header />
             {children}
         <Footer />
+        {/*<div className="fixed bg-gradient-to-tr from-emerald-50 to-cyan-50 z-[-1] inset-0 opacity-50"/>*/}
+        {/*<div className="fixed bg-gradient-to-tr bg-[#23252f] z-[-1] inset-0"/>*/}
+      {/*inset means top left right bottom 0*/}
       </body>
     </html>
   );
