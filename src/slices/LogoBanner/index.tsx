@@ -31,7 +31,7 @@ const LogoBanner: FC<LogoBannerProps> = ({ slice }) => {
                   </div>
                 </div>
                 <div className="logo-banner__image -link flex md:justify-end md:items-end">
-                  <Button field={slice.primary.link}>
+                  <Button field={slice.primary.link} className="btn -nav-button">
                     {slice.primary.link_text}
                   </Button>
                 </div>

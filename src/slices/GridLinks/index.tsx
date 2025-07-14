@@ -6,7 +6,7 @@ import { PrismicRichText } from "@prismicio/react";
 import Bounded from "../../components/Bounded";
 import Button from "../../components/Button";
 import Heading from "../../components/Heading";
-import {JSXMapSerializer} from "@prismicio/react/src/PrismicRichText";
+import {JSXMapSerializer} from "@prismicio/react";
 
 const components: JSXMapSerializer = {
   heading2: ({children})=>(
@@ -46,7 +46,7 @@ const GridLinks: FC<GridLinksProps> = ({ slice }) => {
                   <div className="mb-8 md:mb-8">
                     <PrismicRichText components={components} field={item.description}/>
                   </div>
-                  <Button field={item.link} className="mb-8 md:mb-8">
+                  <Button field={item.link}>
                     {item.link_text}
                   </Button>
                 </div>

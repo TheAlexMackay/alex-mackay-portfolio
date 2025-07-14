@@ -5,7 +5,7 @@ import { PrismicRichText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 import Bounded from "../../components/Bounded";
 import Heading from "../../components/Heading";
-import {JSXMapSerializer} from "@prismicio/react/src/PrismicRichText";
+import {JSXMapSerializer} from "@prismicio/react";
 import clsx from "clsx"
 
 const components: JSXMapSerializer = {

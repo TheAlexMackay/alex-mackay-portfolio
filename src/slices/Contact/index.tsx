@@ -7,7 +7,7 @@ import Bounded from "../../components/Bounded";
 import Button from "../../components/Button";
 import IconButton from "../../components/IconButton";
 import Heading from "../../components/Heading";
-import {JSXMapSerializer} from "@prismicio/react/src/PrismicRichText";
+import {JSXMapSerializer} from "@prismicio/react";
 
 const components: JSXMapSerializer = {
   heading2: ({children})=>(
@@ -36,7 +36,9 @@ const Contact: FC<ContactProps> = ({ slice }) => {
           <PrismicRichText field={slice.primary.title} components={components}/>
           <PrismicRichText field={slice.primary.content} components={components}/>
           <div className="mb-8 md:mb-8 flex gap-4">
-            <PrismicNextImage field={slice.primary.email_link_image} className="w-[20px] h-[16px]" />
+            <a href={"mailto:" + slice.primary.email_link_text} className="">
+              <PrismicNextImage field={slice.primary.email_link_image} className="w-[20px] h-[16px]" />
+            </a>
             <a href={"mailto:" + slice.primary.email_link_text} className="btn">{slice.primary.email_link_text}</a>
           </div>
 
@@ -45,7 +47,7 @@ const Contact: FC<ContactProps> = ({ slice }) => {
               <PrismicNextImage field={slice.primary.linkedin_link_image} className="w-[20px] h-[20px]" />
             </IconButton>
             <div className="flex items-center">
-              <Button field={slice.primary.linkedin_link} className="">
+              <Button field={slice.primary.linkedin_link}>
                 {slice.primary.linkedin_link_text}
               </Button>
             </div>

@@ -7,7 +7,7 @@ import { PrismicNextImage } from "@prismicio/next";
 import BoundedHero from "../../components/BoundedHero";
 import Button from "../../components/Button";
 import Heading from "../../components/Heading";
-import {JSXMapSerializer} from "@prismicio/react/src/PrismicRichText";
+import {JSXMapSerializer} from "@prismicio/react";
 import { runConsoleLog } from '../../components/animations';
 import { runOutputSvg } from '../../components/rawSvg';
 import "../../app/animation.css";
