@@ -19,7 +19,7 @@ const components: JSXMapSerializer = {
 /**
  * Props for `Content`.
  */
-export type ContentBlockProps = SliceComponentProps<Content.ContentBlockSlice>;
+export type ContentBlockProps = SliceComponentProps<Content.ContentSlice>;
 
 /**
  * Component for "Content" Slices.
