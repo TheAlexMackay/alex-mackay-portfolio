@@ -1,7 +1,7 @@
 {
   "id": "content",
   "type": "SharedSlice",
-  "name": "Content",
+  "name": "ContentBlock",
   "description": "Content",
   "variations": [
     {
