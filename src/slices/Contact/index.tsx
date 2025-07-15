@@ -11,10 +11,10 @@ import {JSXMapSerializer} from "@prismicio/react";
 
 const components: JSXMapSerializer = {
   heading2: ({children})=>(
-      <Heading as="h2" size="xl" className="leading-none font-bold mb-4 md:mb-8">{children}</Heading>
+      <Heading as="h2" size="xl" className="leading-none font-bold mb-2 md:mb-4">{children}</Heading>
   ),
   paragraph: ({children})=>(
-      <p className="text-1 font-normal font-body mb-4 md:mb-8">{children}</p>
+      <p className="text-1 font-normal font-body mb-2 md:mb-4">{children}</p>
   )
 }
 
@@ -33,8 +33,10 @@ const Contact: FC<ContactProps> = ({ slice }) => {
           data-slice-variation={slice.variation}
       >
         <div className="grid grid-cols-1 border-b-1 leading-1 pb-0">
-          <PrismicRichText field={slice.primary.title} components={components}/>
-          <PrismicRichText field={slice.primary.content} components={components}/>
+          <div className="mb-4">
+            <PrismicRichText field={slice.primary.title} components={components}/>
+            <PrismicRichText field={slice.primary.content} components={components}/>
+          </div>
           <div className="mb-8 md:mb-8 flex gap-4">
             <a href={"mailto:" + slice.primary.email_link_text} className="">
               <PrismicNextImage field={slice.primary.email_link_image} className="w-[20px] h-[16px]" />

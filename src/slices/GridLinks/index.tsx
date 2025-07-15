@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
-import { PrismicNextImage } from "@prismicio/next";
+import {PrismicNextImage, PrismicNextLink} from "@prismicio/next";
 import { PrismicRichText } from "@prismicio/react";
 import Bounded from "../../components/Bounded";
 import Button from "../../components/Button";
@@ -35,20 +35,22 @@ const GridLinks: FC<GridLinksProps> = ({ slice }) => {
           <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-x-16 w-[100%]">
             {slice.primary.grid_item.map((item, index) => (
                 <div key={index} className="logo__image mb-16">
-                  <div className="pb-8 mb-8 border-b-1 border-white">
-                    <div className=" aspect-2/1 relative">
-                      <picture className="image-container absolute top-0 bottom-0 left-0">
-                        <PrismicNextImage field={item.image} className="w-full h-full object-contain"
-                                          imgixParams={{ar: "2:1"}}/>
-                      </picture>
+                  <PrismicNextLink field={item.link} className="">
+                    <div className="pb-8 mb-8 border-b-1 border-white">
+                      <div className=" aspect-2/1 relative">
+                        <picture className="image-container absolute top-0 bottom-0 left-0">
+                          <PrismicNextImage field={item.image} className="w-full h-full object-contain"
+                                            imgixParams={{ar: "2:1"}}/>
+                        </picture>
+                      </div>
                     </div>
-                  </div>
-                  <div className="mb-8 md:mb-8">
-                    <PrismicRichText components={components} field={item.description}/>
-                  </div>
-                  <Button field={item.link}>
-                    {item.link_text}
-                  </Button>
+                    <div className="mb-8 md:mb-8">
+                      <PrismicRichText components={components} field={item.description}/>
+                    </div>
+                    </PrismicNextLink>
+                    <Button field={item.link}>
+                      {item.link_text}
+                    </Button>
                 </div>
             ))}
           </div>

@@ -36,13 +36,13 @@ const ContentBlock: FC<ContentBlockProps> = ({ slice }) => {
               // <div key={index} className="max-w-xs grid sm:place-items-start place-items-center">
 
               // slice.variation === "smallHeading" &&
-              <div key={index} className="flex gap-4 w-[100%]">
-                <div className="w-[66.6%]">
+              <div key={index} className="flex flex-col sm:flex-row gap-4 w-[100%]">
+                <div className="w-[100%] sm:w-[66.6%]">
                     <div className="font-bold">
                         <PrismicRichText components={components} field={item.content_title} />
                     </div>
                 </div>
-                <div className="w-[33.3%]">
+                <div className="w-[100%] sm:w-[33.3%]">
                   <PrismicRichText components={components} field={item.content} />
                   <Button field={item.content_link} className="mb-8 md:mb-8">
                     {item.content_link_text}

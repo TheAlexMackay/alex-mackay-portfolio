@@ -69,6 +69,16 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h5, .h6 {
   margin: 12px 24px;
 }
 
+.btn.-nav-button:first-of-type {
+  margin-left: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .btn.-nav-button:first-of-type {
+    margin-left: 12px;
+  }
+}
+
 .btn.-nav-button:last-of-type {
   padding-right: 0;
 }
