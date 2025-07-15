@@ -143,16 +143,24 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h5, .h6 {
   }
 }
 
-.logo__image:nth-child(4n) .image-container {
-  margin: 20px 20px 20px 0;
+@media only screen and (min-width: 768px) {
+  .logo__image:nth-child(4n) .image-container {
+    align-content: center;
+  }
+
+  .logo__image:nth-child(4n) .image-container img {
+    height: 80%;
+  }
+
+  .logo__image:nth-child(6n) .image-container {
+    width: 80%;
+  }
 }
 
-.logo__image:nth-child(6n) .image-container {
-  margin: 40px 40px 40px 0;
-}
 
 .big-logos :nth-child(5n) .logo-image {
-  padding: 40px;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .hero-heading {
@@ -224,7 +232,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h5, .h6 {
 
 
 .big-logos div:nth-child(5n) .js-svg-logo {
-  padding: 40px;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .big-logos div:nth-child(5n) .js-svg-logo svg {
