@@ -6,7 +6,7 @@ import Bounded from "../components/Bounded";
 export default async function Header() {
     const client = createClient();
     const settings = await client.getSingle("settings")
-    return <Bounded as="header" className="py-4 md:py-6 lg:py-8">
+    return <Bounded as="header" className="py-4 md:py-6 lg:py-8 px-4 md:px-6">
         <div className="flex gap-4 items-center justify-between flex-row flex-wrap">
             <Link href="/">{settings.data.site_title}</Link>
             <nav>
